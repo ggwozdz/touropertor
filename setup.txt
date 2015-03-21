@@ -1,0 +1,16 @@
+
+u will need to set environment variables for facebook auth:
+	rhc set-env FACEBOOK_ID=id -a touroperator
+	rhc set-env FACEBOOK_SECRET=secret -a touroperator
+
+
+Your app should now be live at 
+	http://touroperator-ggwozdz.rhcloud.com/~/com
+
+You may need to address the issues mentioned above and restart the server for the app to work correctly 
+	rhc app-restart -a touroperator
+After app modification run
+	grunt build
+Then deploy with
+	grunt buildcontrol:openshift
+
